@@ -30,7 +30,7 @@ An artist can, of course, have many paintings. Paintings can only be in one gall
     * Returns an `array` of all the artists
 
   * `Artist#paintings`
-   * Returns an `array` all the paintings by an artist
+    * Returns an `array` all the paintings by an artist
 
   * `Artist#galleries`
     * Returns an `array` of all the galleries that an artist has paintings in
@@ -50,7 +50,7 @@ An artist can, of course, have many paintings. Paintings can only be in one gall
 **PAINTING**
 
   * `Painting.all`
-   * Returns an `array` of all the paintings
+    * Returns an `array` of all the paintings
 
   * `Painting.total_price`
     * Returns an `integer` that is the average price of all paintings
@@ -58,16 +58,16 @@ An artist can, of course, have many paintings. Paintings can only be in one gall
 **GALLERY**
 
   * `Gallery.all`
-   * Returns an `array` of all the galleries
+    * Returns an `array` of all the galleries
 
   * `Gallery#paintings`
-   * Returns an `array` of all paintings in a gallery
+    * Returns an `array` of all paintings in a gallery
 
   * `Gallery#artists`
-   * Returns an `array` of all artists that have a painting in a gallery
+    * Returns an `array` of all artists that have a painting in a gallery
 
   * `Gallery#artist_names`
-   * Returns an `array` of the names of all artists that have a painting in a gallery
+    * Returns an `array` of the names of all artists that have a painting in a gallery
 
   * `Gallery#most_expensive_painting`
     * Returns an `instance` of the most expensive painting in a gallery
