@@ -1,42 +1,73 @@
-# Deedle deedle dooo, do do do do (Masterpiece Theater Music)
+# Art Gallery Lab
 
-You finally got yourself a fancy new gig and you've been put in charge of making a program to keep track of paintings, and the galleries that contain them.  
+In this project, we will be practicing object relationships in Ruby, with a particular emphasis on the `has_many` `through` relationship (aka: many-to-many). Please read the whole README before writing any code!
 
-Each painting has a style (eg. "impressionist", "abstract", "finger painting"), and a title.  Each artist has a name and an amount of years active, and each gallery has a name and a city.
+### Introduction
 
-The bare bones have been created for you already, but you'll have to build out the rest.  Get to it!  Ignore the people who say "Don't, champ!".  Do Champ!  (get it?  Like, DuChamp?  Cuz he made art.  Look, it's all I got.)
+You got yourself a fancy new job and you've been put in charge of making a program to keep track of paintings, and the galleries that are selling them them.  
+
+Each painting has a price, and a title.  Each artist has a name and an amount of years of experience, and each gallery has a name and a city.
+
+The initial files and basic attributes have already been built, but you'll need to figure out the relationships and build the rest of the app out yourself!
 
 ## Deliverables
 
-Here's what we need to be able to do.
+### Model the Domain
+
+An artist can, of course, have many paintings. Paintings can only be in one gallery at a time, and only have one artist.  Galleries can have many paintings.
+
+* What are your models?
+* What does your schema look like?
+* What are the relationships between your models?
+
+
+
+### Class Attributes and Methods
 
 **ARTIST**
 
-  - Get a list of all artists
+  * `Artist.all`
+    * Returns an `array` of all the artists
 
-  - Get a list of all the paintings by a specific artists
+  * `Artist#paintings`
+   * Returns an `array` all the paintings by an artist
 
-  - Get a list of all the galleries that a specific artist has paintings in
+  * `Artist#galleries`
+    * Returns an `array` of all the galleries that an artist has paintings in
 
-  - Get a list of all cities that contain galleries that a specific artist has paintings in
+  * `Artist#cities`
+    * Return an `array` of all cities that an artist has paintings in
 
-  - Find the average years of experience of all artists
+  * `Artist.total_experience`
+    * Returns an `integer` that is the total years of experience of all artists
 
+  * `Artist.most_prolific`
+    * Returns an `instance` of the artist with the highest amount of paintings per year of experience.
+
+  * `Artist#create_painting`
+    * Given the arguments of `title`, `price` and `gallery`, creates a new painting belonging to that artist
 
 **PAINTING**
 
-  - Get a list of all paintings
+  * `Painting.all`
+   * Returns an `array` of all the paintings
 
-  - Get a list of all painting styles (a style should not appear more than once in the list)
+  * `Painting.total_price`
+    * Returns an `integer` that is the average price of all paintings
 
 **GALLERY**
 
-  - Get a list of all galleries
+  * `Gallery.all`
+   * Returns an `array` of all the galleries
 
-  - Get a list of all cities that have a gallery. A city should not appear more than once in the list.
+  * `Gallery#paintings`
+   * Returns an `array` of all paintings in a gallery
 
-  - Get a list of artists that have paintings at a specific gallery
+  * `Gallery#artists`
+   * Returns an `array` of all artists that have a painting in a gallery
 
-  - Get a list of the names of artists that have paintings at a specific gallery
+  * `Gallery#artist_names`
+   * Returns an `array` of the names of all artists that have a painting in a gallery
 
-  - Get the combined years of experience of all artists at a specific gallery
+  * `Gallery#most_expensive_painting`
+    * Returns an `instance` of the most expensive painting in a gallery

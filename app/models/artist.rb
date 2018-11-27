@@ -1,11 +1,10 @@
 class Artist
 
-  attr_reader :name
+  attr_reader :name, :years_experience
 
-  def initialize(name, years_active)
+  def initialize(name, years_experience)
     @name = name
-    @years_active = years_active
+    @years_experience = years_experience
   end
-
 
 end
