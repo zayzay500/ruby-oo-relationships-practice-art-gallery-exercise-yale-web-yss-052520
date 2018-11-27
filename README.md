@@ -6,7 +6,7 @@ In this project, we will be practicing object relationships in Ruby, with a part
 
 You got yourself a fancy new job and you've been put in charge of making a program to keep track of paintings, and the galleries that are selling them them.  
 
-Each painting has a price, and a title.  Each artist has a name and an amount of years active, and each gallery has a name and a city.
+Each painting has a price, and a title.  Each artist has a name and an amount of years of experience, and each gallery has a name and a city.
 
 The initial files and basic attributes have already been built, but you'll need to figure out the relationships and build the rest of the app out yourself!
 
@@ -44,8 +44,8 @@ An artist can, of course, have many paintings. Paintings can only be in one gall
   * `Artist.most_prolific`
     * Returns an `instance` of the artist with the highest amount of paintings per year of experience.
 
- * `Artist#create_painting`
-   * Given the arguments of `painting_name`, `painting_price` and `Gallery`, creates a new painting belonging to that artist
+  * `Artist#create_painting`
+    * Given the arguments of `title`, `price` and `gallery`, creates a new painting belonging to that artist
 
 **PAINTING**
 
